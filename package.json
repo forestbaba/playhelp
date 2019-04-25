@@ -13,7 +13,9 @@
     "showcoverage": "start ./coverage/index.html",
     "parser": "babel-eslint",
     "lint": "./node_modules/.bin/eslint server/test --fix",
-    "heroku-prebuild": "npm install --only=dev"
+    "heroku-prebuild": "npm install --only=dev",
+    "heroku config":"set NPM_CONFIG_PRODUCTION=false"
+
     
   },
   "repository": {
