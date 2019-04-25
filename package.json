@@ -12,7 +12,9 @@
     "coveralls": "nyc --reporter=lcov --reporter=text-lcov npm test",
     "showcoverage": "start ./coverage/index.html",
     "parser": "babel-eslint",
-    "lint": "./node_modules/.bin/eslint server/test --fix"
+    "lint": "./node_modules/.bin/eslint server/test --fix",
+    "heroku-prebuild": "npm install --only=dev"
+    
   },
   "repository": {
     "type": "git",
