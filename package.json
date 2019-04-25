@@ -5,6 +5,8 @@
   "main": "server/app.js",
   "scripts": {
     "start": "babel-node server/app.js",
+    "heroku-prebuild": "npm install --only=dev",
+    "heroku config": "set NPM_CONFIG_PRODUCTION=false",
     "start:dev": "nodemon --exec babel-node server/app.js",
     "pretest": "eslint --ignore-path .gitignore .",
     "test": "nyc --reporter=html --reporter=text mocha --require @babel/register --timeout 120000 --require @babel/polyfill server/test --exit",
@@ -12,9 +14,8 @@
     "coveralls": "nyc --reporter=lcov --reporter=text-lcov npm test",
     "showcoverage": "start ./coverage/index.html",
     "parser": "babel-eslint",
-    "lint": "./node_modules/.bin/eslint server/test --fix",
-    "heroku-prebuild": "npm install --only=dev",
-    "heroku config":"set NPM_CONFIG_PRODUCTION=false"
+    "lint": "./node_modules/.bin/eslint server/test --fix"
+   
 
     
   },
